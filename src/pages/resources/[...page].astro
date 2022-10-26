@@ -1,0 +1,24 @@
+---
+import { Layout } from "@globals"
+import PostPreviewList from '@component/PostComponents/PostPreviewList.astro'
+import Paginator from '@component/PostComponents/Paginator.astro'
+//import { PAGE_SIZE } from '$/config'
+
+let title = 'Blog'
+let description = 'All the articles posted so far...'
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob('./*.md');
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    return paginate(sortedPosts, {
+      pageSize: 4 //PAGE_SIZE
+    })
+}
+
+const { page } = Astro.props
+---
+<Layout>
+    <PostPreviewList posts={page.data} />
+    <Paginator page={page} />
+</Layout>
