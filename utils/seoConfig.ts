@@ -25,11 +25,11 @@ export const seoConfig = {
  * Defines the configuration for PWA webmanifest.
  */
 export const manifest: Partial<ManifestOptions> = {
-	name: "Astro PWA Starter", // Change this to your website's name.
-	short_name: "Astro PWA Starter", // Change this to your website's short name.
+	name: "BMS ARM Toolkit", // Change this to your website's name.
+	short_name: "BMS ARM Toolkit", // Change this to your website's short name.
 	description:
 		"Astro PWA Starter is an opionated Astro starter for building robust static websites.", // Change this to your websites description.
-	theme_color: "#30E130", // Change this to your primary color.
+	theme_color: "#be2bbb", // Change this to your primary color.
 	background_color: "#ffffff", // Change this to your background color.
 	display: "minimal-ui",
 	icons: [
