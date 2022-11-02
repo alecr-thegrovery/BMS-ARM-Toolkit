@@ -15,7 +15,7 @@ const DONT_UPDATE_RESOURCES = [
     '/assets/svg/'
 ];
 
-self.addEventListener('install', event => {
+document.addEventListener('install', event => {
     event.waitUntil((async () => {
         const cache = await caches.open(CACHE_NAME);
         cache.addAll(INITIAL_CACHED_RESOURCES);
@@ -25,7 +25,7 @@ self.addEventListener('install', event => {
 // We have a cache-first strategy, where we look for resources in the cache first
 // and only on the network if this fails.
 // We also periodically update the cache in the background for the main pages.
-self.addEventListener('fetch', event => {
+document.addEventListener('fetch', event => {
     event.respondWith((async () => {
         const cache = await caches.open(CACHE_NAME);
 
@@ -69,7 +69,7 @@ self.addEventListener('fetch', event => {
 }*/
 
 // Listen to background sync events to load requested tips that couldn't be retrieved when offline.
-self.addEventListener('sync', event => {
+document.addEventListener('sync', event => {
     /*if (event.tag === 'bg-load-tip') {
         event.waitUntil(backgroundSyncLoadTips());
     }*/
@@ -94,7 +94,7 @@ self.addEventListener('sync', event => {
     });
 
     await localforage.removeItem('bg-tips');*/
-}*/
+//}*/
 
 /*self.addEventListener('notificationclick', event => {
     // assuming only one type of notification right now
@@ -103,7 +103,7 @@ self.addEventListener('sync', event => {
 });*/
 
 // Listen the periodic background sync events to update the cached resources.
-self.addEventListener('periodicsync', event => {
+document.addEventListener('periodicsync', event => {
     if (event.tag === 'update-cached-content') {
         event.waitUntil(updateCachedContent());
     }
