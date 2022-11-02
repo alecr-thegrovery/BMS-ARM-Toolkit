@@ -2,7 +2,7 @@
 
 // UPDATED: 2/2/22
 
-const CACHE_NAME = 'arm-';
+const CACHE_NAME = 'arm-toolkit-pwa';
 const INITIAL_CACHED_RESOURCES = [
     '/',
     '/resources/',
@@ -12,7 +12,6 @@ const INITIAL_CACHED_RESOURCES = [
 ];
 // Cached resources that match the following strings should not be periodically updated.
 const DONT_UPDATE_RESOURCES = [
-    '/tips/',
     '/assets/svg/'
 ];
 
