@@ -9,6 +9,21 @@ import { VitePWA } from "vite-plugin-pwa"
 // Helper imports
 import { manifest, seoConfig } from "./utils/seoConfig"
 
+const getCache = ({ name, pattern }: any) => ({
+  urlPattern: pattern,
+  handler: "CacheFirst" as const,
+  options: {
+    cacheName: name,
+    expiration: {
+      maxEntries: 500,
+      maxAgeSeconds: 60 * 60 * 24 * 365 * 2 // 2 years
+    },
+    cacheableResponse: {
+      statuses: [200]
+    }
+  }
+});
+
 export default defineConfig({
 	site: seoConfig.baseURL,
 	integrations: [
@@ -27,13 +42,25 @@ export default defineConfig({
 				registerType: "autoUpdate",
 				manifest,
 				workbox: {
+				  maximumFileSizeToCacheInBytes: 3000000,
 				  globDirectory: 'dist',
 				  globPatterns: [
-				    '**/*.{html,js,css,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico}',
+				    '*.{js,css,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico,xml}',
+				    '**/*.{js,css,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico,xml}',
 				  ],
 				  // Don't fallback on document based (e.g. `/some-page`) requests
 				  // This removes an errant console.log message from showing up.
-				  navigateFallback: null,
+				  navigateFallback: 'index.html',
+				  runtimeCaching: [
+			            getCache({ 
+			              pattern: /^https:\/\/bms-arm-toolkit-pwa-template.netlify.app\//, 
+			              name: "index" 
+			            }),
+			            getCache({ 
+			              pattern: /^https:\/\/bms-arm-toolkit-pwa-template.netlify.app\/resources/, 
+			              name: "resources" 
+			            })
+			          ]
 				},
 			})
 		]
