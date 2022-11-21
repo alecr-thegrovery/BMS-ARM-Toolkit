@@ -1,0 +1,37 @@
+---
+// Style imports
+import "@style/tailwind.css"
+
+// Props
+export interface Props {
+	/** Title of the page. */
+	title: string
+
+	/** Specific OpenGraph page title. */
+	ogTitle?: string
+
+	/** Description of the page. */
+	description?: string
+
+	/** Image thumbnail for the page. */
+	image?: {
+		url: string
+		alt: string
+	}
+
+	/** Whether or not to disable indexing */
+	disableIndexing?: boolean
+}
+
+const {
+	title,
+	ogTitle,
+	description,
+	image,
+	disableIndexing = false
+} = Astro.props as Props
+---
+
+<div class="">
+	
+</div>

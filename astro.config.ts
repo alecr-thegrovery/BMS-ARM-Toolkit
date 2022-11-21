@@ -5,6 +5,7 @@ import tailwind from "@astrojs/tailwind"
 import sitemap from "@astrojs/sitemap"
 import compress from "astro-compress"
 import { VitePWA } from "vite-plugin-pwa"
+import {generateSW} from 'workbox-build';
 
 // Helper imports
 import { manifest, seoConfig } from "./utils/seoConfig"
@@ -42,15 +43,15 @@ export default defineConfig({
 				registerType: "autoUpdate",
 				manifest,
 				workbox: {
-				  maximumFileSizeToCacheInBytes: 3000000,
+				  maximumFileSizeToCacheInBytes: 10000000,
 				  globDirectory: 'dist',
 				  globPatterns: [
-				    '*.{js,css,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico,xml}',
 				    '**/*.{js,css,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico,xml}',
+				    '*.html',
 				  ],
 				  // Don't fallback on document based (e.g. `/some-page`) requests
 				  // This removes an errant console.log message from showing up.
-				  navigateFallback: 'index.html',
+				  navigateFallback: 'null',
 				  runtimeCaching: [
 			            getCache({ 
 			              pattern: /^https:\/\/bms-arm-toolkit-pwa-template.netlify.app\//, 
@@ -64,5 +65,5 @@ export default defineConfig({
 				},
 			})
 		]
-	}
+	},
 })
