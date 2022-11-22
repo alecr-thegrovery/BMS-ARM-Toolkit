@@ -19,6 +19,27 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 ---
 <Layout>
-    <PostPreviewList posts={page.data} />
-    <Paginator page={page} />
+    <section>
+      <div class="container">
+        
+        <div class="Categories">
+              <div class="cell">
+                <p>[Category Name]</p>
+                <p>[Category Sub Text]</p>
+              </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        
+        <PostPreviewList posts={page.data} />
+        <Paginator page={page} />
+
+      </div>
+    </section>
+
+    
 </Layout>
