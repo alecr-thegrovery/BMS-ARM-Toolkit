@@ -21,12 +21,14 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.13
   svelte: ^3.52.0
   tailwindcss: ^3.2.1
+  toastify-js: ^1.12.0
   typescript: ^4.8.3
   vite-plugin-pwa: ^0.13.1
 
 dependencies:
   lunr: 2.3.9
   svelte: 3.52.0
+  toastify-js: 1.12.0
 
 devDependencies:
   '@astrojs/sitemap': 1.0.0
@@ -6319,6 +6321,10 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /toastify-js/1.12.0:
+    resolution: {integrity: sha512-HeMHCO9yLPvP9k0apGSdPUWrUbLnxUKNFzgUoZp1PHCLploIX/4DSQ7V8H25ef+h4iO9n0he7ImfcndnN6nDrQ==}
+    dev: false
 
   /totalist/3.0.0:
     resolution: {integrity: sha512-eM+pCBxXO/njtF7vdFsHuqb+ElbxqtI4r5EAvk6grfAFyJ6IvWlSkfZ5T9ozC6xWw3Fj1fGoSmrl0gUs46JVIw==}

@@ -1,13 +1,20 @@
 ---
 // Component imports
 import { SEO } from "astro-seo"
+import Toastify from 'toastify-js'
+import { Notifications } from "@globals"
 
 // Style imports
 import "@style/tailwind.css"
+import "@style/globals.scss"
+import "toastify-js/src/toastify.css"
 
 // Helper imports
 import { seoConfig } from "@util/seoConfig"
 //import "@util/serviceWorker"
+
+//JS imports
+import {$} from "jquery";
 
 // Props
 export interface Props {
@@ -151,10 +158,38 @@ const {
 		<main class="flex flex-1 flex-col h-[100%] w-full">
 			<slot />
 		</main>
+		<Notifications/>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+		<script type="text/javascript">
+			console.log( "script start" );
+			Toastify({
+			  text: "New Version Available",
+			  duration: 10000,
+			  destination: "https://github.com/apvarun/toastify-js",
+			  newWindow: false,
+			  close: false,
+			  gravity: "bottom", // `top` or `bottom`
+			  position: "right", // `left`, `center` or `right`
+			  stopOnFocus: true, // Prevents dismissing of toast on hover
+			  style: {
+			    background: "#be2bbb",
+			  },
+			  onClick: function(){} // Callback after click
+			}).showToast();
+			
+			$(document).ready(function() {
+			    console.log( "ready!" );
+			    
+			});
+		</script>
 
 		<script>
 			// This is a hack to get vite-plugin-pwa to generate a sw.js file.
 			// Do not remove this script tag.
 		</script>
+
+
+
+
 	</body>
 </html>
