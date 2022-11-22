@@ -1,5 +1,6 @@
 ---
 import { Layout } from "@globals"
+import { PostCategories } from "@globals"
 import PostPreviewList from '@component/PostComponents/PostPreviewList.astro'
 import Paginator from '@component/PostComponents/Paginator.astro'
 //import { PAGE_SIZE } from '$/config'
@@ -21,14 +22,7 @@ const { page } = Astro.props
 <Layout>
     <section>
       <div class="container">
-        
-        <div class="Categories">
-              <div class="cell">
-                <p>[Category Name]</p>
-                <p>[Category Sub Text]</p>
-              </div>
-        </div>
-
+        <PostCategories/>
       </div>
     </section>
     
