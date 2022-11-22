@@ -32,6 +32,42 @@ const {
 } = Astro.props as Props
 ---
 
-<div class="">
-	
+<div class="Notifications">
+	<style lang="scss">
+		body{
+			padding-top: 50px;;
+		}
+		.bannerNotification{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: #be2bbb;
+			color: #fff;
+			height: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-content: center;
+			.container{
+				
+			}
+			p{
+				text-align: center;
+			}
+		}
+		.toastNotification{
+
+		}
+	</style>
+
+	<div class="bannerNotification">
+		<div class="container">
+			<p>[Banner Notification Title] - [Banner notification body]</p>
+		</div>
+	</div>
+
+	<div class="toastNotification">
+		
+	</div>
 </div>
