@@ -1,4 +1,7 @@
 ---
+//Components
+import { PostCategory } from "@globals"
+
 // Style imports
 import "@style/tailwind.css"
 
@@ -45,36 +48,42 @@ const {
 				align-items: center;
 				justify-content: center;
 				width: 25%;
+				padding: 25px;
+			}
+
+			.cell{
+				width: 100%;
+				max-width: 350px;
+				border: solid 2px #212121;
 			}
 		}
 	</style>
 
 	<div class="categories">
 		
-		<div class="cellWrapper">
-			<div class="cell">
-				<p>[Category Name]</p>
-				<p>[Category Sub Text]</p>
-				<a href="#" >[Category Link]</a>
-			</div>
-		</div>
+		<PostCategory
+			name="Category 1"
+			subText="subText copy"
+			link="category-name"
+		/>
 
-	      <div class="cellWrapper">
-			<div class="cell">
-				<p>[Category Name]</p>
-				<p>[Category Sub Text]</p>
-				<a href="#" >[Category Link]</a>
-			</div>
-		</div>
+		<PostCategory
+			name="Category 2"
+			subText="subText copy"
+			link="category-name"
+		/>
 
-		<div class="cellWrapper">
-			<div class="cell">
-				<p>[Category Name]</p>
-				<p>[Category Sub Text]</p>
-				<a href="#" >[Category Link]</a>
-			</div>
-		</div>
+		<PostCategory
+			name="Category 3"
+			subText="subText copy"
+			link="category-name"
+		/>
 
+		<PostCategory
+			name="Category 4"
+			subText="subText copy"
+			link="category-name"
+		/>
 
 	</div>
 </div>

@@ -1,5 +1,6 @@
 export { Header } from "./Header"
 export { Footer } from "./Footer"
 export { Layout } from "./Layout"
-export { PostCategories } from "./PostCategories"
+export { PostCategoryFeed } from "./PostCategoryFeed"
+export { PostCategory } from "./PostCategory"
 export { Notifications } from "./Notifications"

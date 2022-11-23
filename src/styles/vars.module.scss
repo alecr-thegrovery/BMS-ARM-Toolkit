@@ -72,6 +72,7 @@ Description:	Store SCSS vars here
 /***** Border Settings *****/
 	$borderWidth:	2px;
 	$borderRadius:	0;
+	$border1: solid $borderWidth $primaryColor;
 
 /***** Shadows *****/
 	/* source: https://brumm.af/shadows */

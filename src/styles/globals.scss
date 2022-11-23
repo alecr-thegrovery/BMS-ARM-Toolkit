@@ -51,7 +51,9 @@ html{
     //border-width: 2px;
     border: none;
     height: 2px;
-    background-color: $black
+    background-color: $black;
+    margin-top: $clampLarge;
+    margin-bottom: $clampLarge;
   }
 
   h1, h2, h3, h4, h5, h6{
@@ -72,7 +74,7 @@ code{
 .container{
   width: 100%;
   max-width: $contentWidthMd;
-  margin: auto;
+  margin: 0 auto;
 }
 
 
