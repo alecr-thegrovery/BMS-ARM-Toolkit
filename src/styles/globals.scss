@@ -9,7 +9,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   //main font
   font-family: $fontBody, monospace;
-  line-height: 1.6;
+  line-height: 1.2;
   font-size: $clampMedium;
   color: $textColor;
   background-color: $backgroundColor;
@@ -78,11 +78,27 @@ code{
 }
 
 
-/*.container{
-  width: 100%;
-  max-width: $contentWidthLg;
-  margin: auto;
-}*/
+/* ============================== */
+/*                            Articles                         */
+/* ============================== */
+.PostLayout{
+  padding: $clampExtraLarge $clampMedium;
+  p{
+    line-height: 1.2;
+    margin-bottom:1.5em;
+  }
+  ul{
+    line-height: 1.2;
+    margin-bottom:1.5em;
+    padding-left:1.25em;
+    li{
+      list-style: disc;
+    }
+  }
+  h1, h2, h3, h4, h5, h6{
+    margin-bottom:1em;
+  }
+}
 
 
 /* ============================== */

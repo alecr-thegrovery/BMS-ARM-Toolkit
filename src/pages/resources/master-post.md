@@ -1,5 +1,7 @@
 ---
 
+layout: 'src/layouts/PostLayout.astro'
+
 title: Master Post
 date: 2022-22-11
 lastUpdated: 2022-22-11
@@ -17,20 +19,25 @@ description: There's a simple secret to building a faster website — just ship 
 ---
 
 # Master Post
-This file should be used as the starter file for each post.  Update it with everything you'll need for this project, and use it to keep your posts standardized.  It contains examples of elements such as: headings, links, lists, text treatments
+
+---
+
+This file should be used as the starter file for each post.  Update it with everything you'll need for this project, and use it to keep your posts standardized.  It contains examples of elements such as: headings, links, lists, text treatments, etc.
 
 This project uses **Markdown** files for the posts.  Markdown is plain text (with some extra bells and whistles) that gets automatically converted into HTML by the project, which then gets styling applied via CSS.  This lets you ignore all the extra code surrounding the posts and just write simple text.  Here's some guides: 
 
 - [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 - [Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-## H1 is good
+## Headings Should Be In Order
 
-### H2 is good too
+### Headings are used in SEO
 
-> links are better
+This is how you write a [link](https://github.com/areimel).
 
-[I know](they-are-better)
+Here's a line: 
+
+---
 
 This post marks the first public beta release of Astro. Missing features and bugs are still to be expected at this early stage. There are still some months to go before an official 1.0 release, but there are already several fast sites built with Astro in production today. We would love your early feedback as we move towards a v1.0 release later this year.
 
