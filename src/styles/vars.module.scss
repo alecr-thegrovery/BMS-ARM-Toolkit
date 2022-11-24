@@ -1,0 +1,108 @@
+/**************************************************
+VARS File
+
+Description:	Store SCSS vars here
+
+
+**************************************************/
+
+
+/***** Color Variables *****/
+	$black: 				#212121;
+	$white: 				#fafafa;
+	$grey_1:			#ececec;
+	$grey_2:			#3e3e3e;
+	$red: 				#fb0000;
+	$orange: 			#D96D01;
+	$darkOrange:		#BA4103;
+	$purple: 			#be2bbb;
+
+/***** Named Colors *****/
+	//only use other vars
+	$primaryColor:			$black;
+	$secondaryColor:		$white;
+	$backgroundColor:		$white;
+	$textColor:				$black;
+	$accentColor:			$darkOrange;
+
+
+/***** Fonts *****/
+	$fontBody:			"Roboto Mono";
+	$fontDisplay:	"Roboto Mono";
+	$fontAlt:			"Roboto Mono";
+
+/***** Static Font Sizes *****/
+	$fontSizeHeading:		36px;
+	$fontSizeSubhead:		24px;
+	$fontSizeBody:			18px;
+	$fontSizeDetail:		12px;
+
+/***** Dynamic Font Sizes *****/
+	$clampExtraSmall:		clamp(8px, 1vw, 12px);
+	$clampSmall: 				clamp(12px, 1.5vw, 16px);
+	$clampMedium: 			clamp(14px, 2vw, 20px);
+	$clampLarge: 			clamp(24px, 4vw, 36px);
+	$clampExtraLarge: 	clamp(36px, 5.5vw, 52px);
+
+/***** Letter Spacing *****/
+	$letterSpacingWide:		0.05em;
+	$letterSpacingNormal:	0.035em;
+
+/***** Content Widths *****/
+	$contentWidthMin: 		320px;
+	$contentWidthSm: 		650px;
+	$contentWidthMd: 		1100px;
+	$contentWidthLg: 		1450px;
+	$contentWidthXl: 		1650px;
+	$contentWidthMax: 		2400px;
+
+
+/***** Transition Timings *****/
+	$transitionFast:		0.175s ease-in-out;
+	$transitionMedium:	0.25s ease-in-out;
+	$transitionSlow:		0.5s ease-in-out;
+
+
+/***** Z-Index Ranges *****/
+	$zIndexBase: 		0;
+	$zIndexMedium: 	100;
+	$zIndexHigh: 		1000;
+
+
+/***** Border Settings *****/
+	$borderWidth:	2px;
+	$borderRadius:	0;
+	$border1: solid $borderWidth $primaryColor;
+
+/***** Shadows *****/
+	/* source: https://brumm.af/shadows */
+	$niceShadow:
+		0 2.8px 2.2px rgba($black, 0.02),
+		0 6.7px 5.3px rgba($black, 0.028),
+		0 12.5px 10px rgba($black, 0.035),
+		0 22.3px 17.9px rgba($black, 0.042),
+		0 41.8px 33.4px rgba($black, 0.05),
+		0 100px 80px rgba($black, 0.07);
+
+	$niceShadowShort:
+		0 1.1px 2.2px rgba($black, 0.02),
+		0 2.7px 5.3px rgba($black, 0.028),
+		0 5px 10px rgba($black, 0.035),
+		0 8.9px 17.9px rgba($black, 0.042),
+		0 16.7px 33.4px rgba($black, 0.05);
+
+
+	$textShadowRed:
+		1px 1px $red, 
+		2px 2px $red, 
+		3px 3px $red, 
+		4px 4px $red, 
+		5px 5px $red;
+	  
+	$textGlowRed:
+		0 0 1vw $red, 
+		0 0 3vw $red, 
+		0 0 10vw $red, 
+		0 0 10vw $red, 
+		0 0 .4vw $red, 
+		.25vw .25vw .1vw #806914;

@@ -1,5 +1,8 @@
 ---
 import { Layout } from "@globals"
+import { PostCategoryFeed } from "@component/posts"
+import { PostPreviewFeed } from "@component/posts"
+
 import PostPreviewList from '@component/PostComponents/PostPreviewList.astro'
 import Paginator from '@component/PostComponents/Paginator.astro'
 //import { PAGE_SIZE } from '$/config'
@@ -19,6 +22,24 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 ---
 <Layout>
-    <PostPreviewList posts={page.data} />
-    <Paginator page={page} />
+    <section>
+      <div class="container">
+        <PostCategoryFeed/>
+      </div>
+    </section>
+    
+    <div class="container">
+      <hr/>
+    </div>
+    
+    <section>
+      <div class="container">
+        
+        <PostPreviewFeed posts={page.data} />
+        <Paginator page={page} />
+
+      </div>
+    </section>
+
+    
 </Layout>

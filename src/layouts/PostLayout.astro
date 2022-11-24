@@ -1,0 +1,21 @@
+---
+// Component imports
+import { Layout } from "@globals"
+
+let frontmatter = Astro.props.frontmatter
+---
+
+<style lang="scss">
+	.PostLayout{
+		padding-top: 50px;
+		
+
+	}
+</style>
+
+<Layout title={frontmatter.title} >
+	<article class="container PostLayout">
+		<slot />
+	</article>
+</Layout>
+

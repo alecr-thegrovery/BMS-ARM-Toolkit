@@ -1,0 +1,18 @@
+---
+
+const { frontmatter: post, url } = Astro.props.post
+---
+<div class="post-preview">
+    <div class="flex-1">
+        <h4 class="post-preview__title">
+            <a href={url} title={post.title}>{post.title}</a>
+        </h4>
+        <p class="post-preview__desc">
+            {post.description}
+        </p>
+        <a href={url} title={post.title}>
+        	Learn More
+        </a>
+    </div>
+</div>
+
