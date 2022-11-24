@@ -30,14 +30,20 @@ This project uses **Markdown** files for the posts.  Markdown is plain text (wit
 - [Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ## Headings Should Be In Order
+There should only be one h1 element
 
-### Headings are used in SEO
+### Headings are used as Navigation
 
 This is how you write a [link](https://github.com/areimel).
 
 Here's a line: 
 
 ---
+
+Here's a list:
+
+- Use dashes to write a list
+- Just like you would when typing out a list by hand
 
 This post marks the first public beta release of Astro. Missing features and bugs are still to be expected at this early stage. There are still some months to go before an official 1.0 release, but there are already several fast sites built with Astro in production today. We would love your early feedback as we move towards a v1.0 release later this year.
 
