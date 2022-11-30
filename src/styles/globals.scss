@@ -74,6 +74,7 @@ code{
 .container{
   width: 100%;
   max-width: $contentWidthMd;
+  padding: 0 $clampMedium;
   margin: 0 auto;
 }
 
