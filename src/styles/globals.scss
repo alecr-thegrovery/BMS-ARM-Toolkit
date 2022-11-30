@@ -28,6 +28,7 @@ html{
     color:  $black;
     text-decoration: none;
     cursor: pointer;
+    display: inline-block;
   }
 
   //default link style
@@ -76,6 +77,20 @@ code{
   max-width: $contentWidthMd;
   padding: 0 $clampMedium;
   margin: 0 auto;
+}
+
+.button{
+  border: $border1;
+  padding: $clampExtraSmall;
+  display: inline-block;
+  color: $primaryColor;
+  background-color: none;
+  transition: $transitionMain;
+  &:hover{
+    color: $secondaryColor;
+    background-color: $accentColor;
+    border-color: $accentColor;
+  }
 }
 
 

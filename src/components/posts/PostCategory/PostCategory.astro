@@ -18,7 +18,7 @@ const {
 
 <style lang="scss">
 	@import "/src/styles/vars.module.scss";
-	.cellWrapper{
+	.PostCategory{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -32,13 +32,35 @@ const {
 		max-width: 350px;
 		border: solid 2px #212121;
 		padding: $clampExtraSmall;
+
+		.title{
+			font-size: $clampLarge;
+			border-bottom: $border1;
+			display: block;
+		}
+		.subtitle{
+			display: block;
+		}
+		.button{
+			margin-top: $clampMedium;
+		}
 	}
 </style>
 
-<div class="cellWrapper">
+<div class="PostCategory">
 	<div class="cell">
-		<p>{name}</p>
-		<p>{subText}</p>
-		<a href={"/resources?category=" + link} >{link}</a>
+		
+		<p class="title">
+			{name}
+		</p>
+
+		<p class="subTitle">
+			{subText}
+		</p>
+
+		<a class="button" href={"/resources?category=" + link} >
+			View Resources 
+		</a>
+
 	</div>
 </div>
