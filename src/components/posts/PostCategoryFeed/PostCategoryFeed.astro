@@ -36,26 +36,14 @@ const {
 ---
 
 <div class="PostCategories">
+	
 	<style lang="scss">
+		@import "/src/styles/vars.module.scss";
 		.PostCategories{
 			.categories{
 				display: flex;
+				align-items: flex-start;
 				flex-wrap: wrap;
-			}
-
-			.cellWrapper{
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				width: 25%;
-				padding: 25px;
-			}
-
-			.cell{
-				width: 100%;
-				max-width: 350px;
-				border: solid 2px #212121;
 			}
 		}
 	</style>
@@ -63,51 +51,33 @@ const {
 	<div class="categories">
 		
 		<PostCategory
-			name="Category 1"
+			name="General Program Materials"
 			subText="subText copy"
-			link="category-name"
+			link="general-program-materials"
 		/>
 
 		<PostCategory
-			name="Category 2"
+			name="Commance Rx"
 			subText="subText copy"
-			link="category-name"
+			link="commance-rx"
 		/>
 
 		<PostCategory
-			name="Category 3"
+			name="LASH Training, Call Guides, IVRs, etc."
 			subText="subText copy"
-			link="category-name"
+			link="misc"
 		/>
 
 		<PostCategory
-			name="Category 4"
+			name="iARMs Materials and Training"
 			subText="subText copy"
-			link="category-name"
+			link="iarms"
 		/>
 
 		<PostCategory
-			name="Category 1"
+			name="Copay"
 			subText="subText copy"
-			link="category-name"
-		/>
-
-		<PostCategory
-			name="Category 2"
-			subText="subText copy"
-			link="category-name"
-		/>
-
-		<PostCategory
-			name="Category 3"
-			subText="subText copy"
-			link="category-name"
-		/>
-
-		<PostCategory
-			name="Category 4"
-			subText="subText copy"
-			link="category-name"
+			link="copay"
 		/>
 
 	</div>
