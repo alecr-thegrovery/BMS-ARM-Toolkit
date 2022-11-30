@@ -1,0 +1,57 @@
+---
+// Style imports
+//import "@style/tailwind.css"
+
+// Props
+export interface Props {
+	name?: string
+	subText?: string
+	link?: string
+}
+
+const {
+	name,
+	subText,
+	link
+} = Astro.props as Props
+---
+
+<style lang="scss">
+	@import "/src/styles/vars.module.scss";
+	.Header{
+		width: 100%;
+		border-bottom: solid 2px $black;
+		padding: $clampMedium 0;
+		.container{
+			display: flex;
+		}
+		.cell{
+			width: 50%;
+			padding: 0 $clampSmall;
+
+			&.right{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+</style>
+
+<div class="Header">
+	<div class="container">
+		
+		<div class="cell left">
+			<a href="/" class="homeLink">
+				🟢 astro-pwa-starter
+			</a>
+		</div>
+		
+		<div class="cell right">
+			<a href="/" class="homeLink">
+				[nav button]
+			</a>
+		</div>
+
+	</div>
+</div>
