@@ -23,7 +23,7 @@ Description:	Store SCSS vars here
 	$secondaryColor:		$white;
 	$backgroundColor:		$white;
 	$textColor:				$black;
-	$accentColor:			$darkOrange;
+	$accentColor:			$purple;
 
 
 /***** Fonts *****/
@@ -61,6 +61,7 @@ Description:	Store SCSS vars here
 	$transitionFast:		0.175s ease-in-out;
 	$transitionMedium:	0.25s ease-in-out;
 	$transitionSlow:		0.5s ease-in-out;
+	$transitionMain:		$transitionMedium;
 
 
 /***** Z-Index Ranges *****/

@@ -2,6 +2,9 @@
 // Style imports
 //import "@style/tailwind.css"
 
+//Component imports
+import { Menu } from "@component/icons"
+
 // Props
 export interface Props {
 	name?: string
@@ -31,10 +34,15 @@ const {
 
 			&.right{
 				display: flex;
-				justify-content: center;
+				justify-content: flex-end;
 				align-items: center;
 			}
 		}
+
+		/*.menuButton svg{
+			width: $clampMedium;
+			fill: $primaryColor;
+		}*/
 	}
 </style>
 
@@ -48,8 +56,8 @@ const {
 		</div>
 		
 		<div class="cell right">
-			<a href="/" class="homeLink">
-				[nav button]
+			<a href="#" class="menuButton">
+				<Menu/>
 			</a>
 		</div>
 
