@@ -8,8 +8,10 @@ let frontmatter = Astro.props.frontmatter
 <style lang="scss">
 	.PostLayout{
 		padding-top: 50px;
-		
-
+		display: flex;
+		.cell{
+			width: 50%;
+		}
 	}
 </style>
 
@@ -27,8 +29,17 @@ let frontmatter = Astro.props.frontmatter
                 {frontmatter.category}
             </a>
 	</div>
+
 	<article class="container PostLayout">
-		<slot />
+		<div class="cell">
+			<div class="inner">
+				[Document Download]
+			</div>
+		</div>
+		<div class="cell">
+			<slot />
+		</div>
 	</article>
+	
 </Layout>
 
