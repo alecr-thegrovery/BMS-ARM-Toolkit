@@ -84,7 +84,7 @@ code{
   padding: $clampExtraSmall;
   display: inline-block;
   color: $primaryColor;
-  background-color: none;
+  background-color: transparent;
   transition: $transitionMain;
   &:hover{
     color: $secondaryColor;

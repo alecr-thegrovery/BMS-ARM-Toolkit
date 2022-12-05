@@ -2,22 +2,73 @@
 
 const { frontmatter: post, url } = Astro.props.post
 ---
-<div class="post-preview">
-    <div class="flex-1">
-        <h4 class="post-preview__title">
+
+
+<style lang="scss">
+    @import "/src/styles/vars.module.scss";
+    .PostCategory{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33.333%;
+        padding: $clampMedium;
+    }
+
+    .cell{
+        width: 100%;
+        max-width: 350px;
+        height: 100%;
+        border: $border1;
+        padding: $clampExtraSmall;
+        display: flex;
+        flex-direction: column;
+
+        .title{
+            font-size: $clampLarge;
+            border-bottom: $border1;
+            padding-bottom: $clampExtraSmall;
+            margin-bottom: $clampExtraSmall;
+            display: block;
+        }
+        .category{
+            font-size: $clampSmall;
+            margin-bottom: $clampExtraSmall;
+        }
+        .description{
+            display: block;
+        }
+        .button{
+            margin-top: $clampMedium;
+            justify-self: flex-end;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<div class="PostCategory">
+    <div class="cell">
+        
+        <div class="title">
             <a href={url} title={post.title}>{post.title}</a>
-        </h4>
+        </div>
+
         <div class="category">
+            <span>Category: </span>
             <a href={"/resources?category=" + post.category}>
                 {post.category}
             </a>
         </div>
-        <p class="post-preview__desc">
+
+        <p class="description">
             {post.description}
         </p>
-        <a href={url} title={post.title}>
-        	Learn More
+
+        <a class="button" href={url} title={post.title}>
+            Learn More
         </a>
+
     </div>
 </div>
-

@@ -2,37 +2,6 @@
 //Components
 import { PostCategory } from "@component/posts"
 
-// Style imports
-import "@style/tailwind.css"
-
-// Props
-export interface Props {
-	/** Title of the page. */
-	title: string
-
-	/** Specific OpenGraph page title. */
-	ogTitle?: string
-
-	/** Description of the page. */
-	description?: string
-
-	/** Image thumbnail for the page. */
-	image?: {
-		url: string
-		alt: string
-	}
-
-	/** Whether or not to disable indexing */
-	disableIndexing?: boolean
-}
-
-const {
-	title,
-	ogTitle,
-	description,
-	image,
-	disableIndexing = false
-} = Astro.props as Props
 ---
 
 <div class="PostCategories">
@@ -42,7 +11,7 @@ const {
 		.PostCategories{
 			.categories{
 				display: flex;
-				align-items: flex-start;
+				align-items: stretch;
 				flex-wrap: wrap;
 			}
 		}
@@ -52,31 +21,31 @@ const {
 		
 		<PostCategory
 			name="General Program Materials"
-			subText="subText copy"
+			description="description copy"
 			link="general-program-materials"
 		/>
 
 		<PostCategory
 			name="Commence Rx"
-			subText="subText copy"
+			description="description copy"
 			link="commence-rx"
 		/>
 
 		<PostCategory
 			name="LASH Training, Call Guides, IVRs, etc."
-			subText="subText copy"
+			description="description copy"
 			link="misc"
 		/>
 
 		<PostCategory
 			name="iARMs Materials and Training"
-			subText="subText copy"
+			description="description copy"
 			link="iarms"
 		/>
 
 		<PostCategory
 			name="Copay"
-			subText="subText copy"
+			description="description copy"
 			link="copay"
 		/>
 

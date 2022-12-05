@@ -3,13 +3,18 @@ import { PostPreview } from "@component/posts"
 const { posts } = Astro.props
 const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 ---
-<section class="post-preview__list">
-    {sortedPosts.map((post) => (
-        <PostPreview post={post}/>
-    ))}
-</section>
-<style>
-    .post-preview__list {
-        @apply flex flex-col gap-12
+
+<style lang="scss">
+    @import "/src/styles/vars.module.scss";
+    .PostPreviewFeed{
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
     }
 </style>
+
+<div class="PostPreviewFeed">
+   {sortedPosts.map((post) => (
+        <PostPreview post={post}/>
+    ))}
+</div>

@@ -5,13 +5,13 @@ import "@style/tailwind.css"
 // Props
 export interface Props {
 	name?: string
-	subText?: string
+	description?: string
 	link?: string
 }
 
 const {
 	name,
-	subText,
+	description,
 	link
 } = Astro.props as Props
 ---
@@ -30,15 +30,18 @@ const {
 	.cell{
 		width: 100%;
 		max-width: 350px;
+		height: 100%;
 		border: solid 2px #212121;
 		padding: $clampExtraSmall;
 
 		.title{
 			font-size: $clampLarge;
 			border-bottom: $border1;
+			padding-bottom: $clampExtraSmall;
+			margin-bottom: $clampExtraSmall;
 			display: block;
 		}
-		.subtitle{
+		.description{
 			display: block;
 		}
 		.button{
@@ -54,8 +57,8 @@ const {
 			{name}
 		</p>
 
-		<p class="subTitle">
-			{subText}
+		<p class="description">
+			{description}
 		</p>
 
 		<a class="button" href={"/resources?category=" + link} >
