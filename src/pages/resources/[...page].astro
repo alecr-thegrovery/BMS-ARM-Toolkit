@@ -12,7 +12,11 @@ let description = 'All the articles posted so far...'
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob('./*.md');
-  const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const sortedPosts = allPosts.sort((a, b) => 
+    Math.floor(new Date(b.frontmatter.datetime).getTime() / 1000) -
+    Math.floor(new Date(a.frontmatter.datetime).getTime() / 1000)
+  );
 
     return paginate(sortedPosts, {
       pageSize: 4 //PAGE_SIZE

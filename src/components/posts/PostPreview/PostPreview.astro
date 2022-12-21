@@ -52,12 +52,12 @@ const { frontmatter: post, url } = Astro.props.post
     <div class="cell">
         
         <div class="title">
-            <a href={url} title={post.title}>{post.title}</a>
+            <a href={url} title={post.title} rel="prefetch">{post.title}</a>
         </div>
 
         <div class="category">
             <span>Category: </span>
-            <a href={"/resources?category=" + post.category}>
+            <a href={"/resources?category=" + post.category} rel="prefetch">
                 {post.category}
             </a>
         </div>
@@ -66,7 +66,7 @@ const { frontmatter: post, url } = Astro.props.post
             {post.description}
         </p>
 
-        <a class="button" href={url} title={post.title}>
+        <a class="button" href={url} title={post.title} rel="prefetch">
             Learn More
         </a>
 
